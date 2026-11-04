@@ -57,7 +57,6 @@ public class DungeonEscape {
                 System.out.println("No sabes cómo hacer eso.");
                 System.out.println();
             }
-
         }
 
         Boolean hasOpenedDoor = false;
@@ -83,16 +82,15 @@ public class DungeonEscape {
                 System.out.println();
                 hasOpenedDoor = true;
             }
-
         }
 
         Boolean hasChosenPath = false;
         attempts = 0;
         String chosenPath = "";
-        while (hasChosenPath == false) { 
-    
+        while (hasChosenPath == false) {
+
             if (attempts == 0) {
-                
+
                 System.out.println("Avanzas y observas que frente a ti hay dos caminos.");
                 System.out.println("A tu izquierda hay un pasillo, por el que entra una corriente de aire.");
                 System.out.println("A tu derecha hay unas escaleras, que descienden hacia la oscuridad.");
@@ -100,63 +98,76 @@ public class DungeonEscape {
                 System.out.println("A tu izquierda hay un pasillo por donde se siente una ligera brisa.");
                 System.out.println("A tu derecha hay unas escaleras oscuras, y no alcanzas a ver donde terminan.");
             }
-            attempts ++;
+            attempts++;
 
-            System.out.println("¿Hacia dónde quiers ir?");
+            System.out.println("¿Hacia dónde quieres ir?");
             action = scanner.nextLine();
             System.out.println("Has elegido: " + action);
             action = action.strip();
 
-            if (action.equalsIgnoreCase("Ir a la derecha") || action.equalsIgnoreCase("Bajar las escaleras") || action.equalsIgnoreCase("Derecha") || action.equalsIgnoreCase("Bajar") || action.equalsIgnoreCase("A la derecha")) {
+            if (action.equalsIgnoreCase("Ir a la derecha") || action.equalsIgnoreCase("Bajar las escaleras")
+                    || action.equalsIgnoreCase("Derecha") || action.equalsIgnoreCase("Bajar")
+                    || action.equalsIgnoreCase("A la derecha")) {
 
                 hasChosenPath = true;
                 chosenPath = "stairs";
-            } else if (action.equalsIgnoreCase("Ir a la izquierda") || action.equalsIgnoreCase("Entrar al pasillo") || action.equalsIgnoreCase("Ir al pasillo") || action.equalsIgnoreCase("Izquierda") || action.equalsIgnoreCase("A la izquierda")) {
+            } else if (action.equalsIgnoreCase("Ir a la izquierda") || action.equalsIgnoreCase("Entrar al pasillo")
+                    || action.equalsIgnoreCase("Ir al pasillo") || action.equalsIgnoreCase("Izquierda")
+                    || action.equalsIgnoreCase("A la izquierda")) {
 
                 hasChosenPath = true;
                 chosenPath = "hallway";
             } else {
                 System.out.println("No puedes hacer eso. Debes de ir por uno de los caminos.");
             }
+        }
 
-            if (chosenPath.equals("stairs")) {
+        if (chosenPath.equals("stairs")) {
 
-                System.out.println("Bajas las escaleras oscuras con mucho cuidado.");
-                System.out.println("A medida que bajas, ves más y más oscuro.");
-                System.out.println("Ya no ves nada. Te detienes.");
-                System.out.println("Sigues quieto hasta que escuchas un leve quejido a la distancia.");
-                System.out.println("¿Continúas?");
-                
+            System.out.println("Bajas las escaleras oscuras con mucho cuidado.");
+            System.out.println("A medida que bajas, ves más y más oscuro.");
+            System.out.println("Ya no ves nada. Te detienes.");
+            System.out.println("Sigues quieto hasta que escuchas un leve quejido a la distancia.");
+            System.out.println("¿Continúas?");
+
+            action = scanner.nextLine();
+            action = action.strip();
+
+            if (action.equalsIgnoreCase("Si") || action.equalsIgnoreCase("Sí") || action.equalsIgnoreCase("Continúo")
+                    || action.equalsIgnoreCase("Continuo")) {
+                System.out.println("Sigues bajando hasta llegar al fondo de las escaleras.");
+                System.out.println("Avanzas por el pasillo. Los quejidos se van haciendo más fuertes.");
+                System.out.println("De pronto ves una luz débil. Caminas hacia ella.");
+                System.out.println("Al acercarte reconoces que es una antorcha.");
+                System.out.println();
+                System.out.println("Estás por agarrarla cuando escuchas una voz.");
+                System.out.println("Está detrás de ti...");
+                System.out.println("¡Hey, tú!");
+                System.out.println("¿Qué haces?");
+
                 action = scanner.nextLine();
                 action = action.strip();
 
-                if (action.equalsIgnoreCase("Si") || action.equalsIgnoreCase("Sí") || action.equalsIgnoreCase("Continúo") || action.equalsIgnoreCase("Continuo")) {
-                    System.out.println("Sigues bajando hasta llegar al fondo de las escaleras.");
-                    System.out.println("Avanzas por el pasillo. Los quejidos se van haciendo más fuertes.");
-                    System.out.println("De pronto ves una luz débil. Caminas hacia ella.");
-                    System.out.println("Al acercarte reconoces que es una antorcha.");
-                    System.out.println();
-                    System.out.println("Estás por agarrarla cuando escuchas una voz.");
-                    System.out.println("Está detrás de ti...");
-                    System.out.println("¡Hey, tú!");
-                    System.out.println("¿Qué haces?");
 
-
-                }
-
-            
-            } else if (chosenPath.equalsIgnoreCase("hallway")) {
-
-                System.out.println("Te adentras por el pasillo.");
-                System.out.println("Su brisa es cada vez más fuerte.");
-                System.out.println("Hay pequeñas antorchas iluminando el camino.");
-                System.out.println("Al final del pasillo ves una puerta abierta.");
-                System.out.println("Sigues y entras en el jardín.");
-                System.out.println("¿Qué haces?");
-
+            } else if (action.equalsIgnoreCase("No") || action.equalsIgnoreCase("No continúo") || action.equalsIgnoreCase("No continuo")) {
+                System.out.println("Te das la vuelta y subes las escaleras.");
+                System.out.println("Estás decidido a irte por el pasillo.");
+                chosenPath = "hallway";
             }
 
+        } 
+        
+        if (chosenPath.equalsIgnoreCase("hallway")) {
 
+            System.out.println("Te adentras por el pasillo.");
+            System.out.println("Su brisa es cada vez más fuerte.");
+            System.out.println("Hay pequeñas antorchas iluminando el camino.");
+            System.out.println("Al final del pasillo ves una puerta abierta.");
+            System.out.println("Sigues y entras en el jardín.");
+            System.out.println("¿Qué haces?");
+
+            action = scanner.nextLine();
+            action = action.strip();
 
 
         }
