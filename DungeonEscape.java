@@ -13,42 +13,42 @@ public class DungeonEscape {
         System.out.println("Frente a ti hay una puerta de hierro cerrada y una pequeña llave oxidada en el suelo.");
         System.out.println();
 
-        String accion;
-        int intentos = 0;
+        String action;
+        int attempts = 0;
 
-        Boolean haRecogidoLaLlave = false;
+        Boolean hasPickedUpKey = false;
 
-        while (haRecogidoLaLlave == false) {
-            intentos++;
+        while (hasPickedUpKey == false) {
+            attempts++;
 
             System.out.println();
-            if (intentos > 1) {
+            if (attempts > 1) {
                 System.out.println("Frente a ti hay una puerta de hierro y una llave oxidada.");
             }
 
             System.out.println("¿Qué quieres hacer?");
-            accion = scanner.nextLine();
+            action = scanner.nextLine();
 
-            System.out.println("Has elegido: " + accion);
-            accion = accion.strip();
+            System.out.println("Has elegido: " + action);
+            action = action.strip();
 
-            if (accion.equalsIgnoreCase("Mirar puerta") || accion.equalsIgnoreCase("Inspeccionar puerta")
-                    || accion.equalsIgnoreCase("Observar") || accion.equalsIgnoreCase("Observar puerta")) {
+            if (action.equalsIgnoreCase("Mirar puerta") || action.equalsIgnoreCase("Inspeccionar puerta")
+                    || action.equalsIgnoreCase("Observar") || action.equalsIgnoreCase("Observar puerta")) {
                 System.out.println();
                 System.out.println("La puerta se ve desgastada y vieja.");
                 System.out.println("Tiene una cerradura.");
                 System.out.println("Parece que necesitas una llave...");
-            } else if (accion.equalsIgnoreCase("Recoger llave") || accion.equalsIgnoreCase("Agarrar llave")
-                    || accion.equalsIgnoreCase("Recoger la llave") || accion.equalsIgnoreCase("Agarrar la llave")) {
+            } else if (action.equalsIgnoreCase("Recoger llave") || action.equalsIgnoreCase("Agarrar llave")
+                    || action.equalsIgnoreCase("Recoger la llave") || action.equalsIgnoreCase("Agarrar la llave")) {
                 System.out.println();
                 System.out.println("Te acercas y recoges la llave.");
                 System.out.println("Está oxidada.");
                 System.out.println("Parece que podría ir en algún sitio...");
-                haRecogidoLaLlave = true;
-            } else if (accion.equalsIgnoreCase("Abrir puerta") || accion.equalsIgnoreCase("Abrir la puerta")
-                    || accion.equalsIgnoreCase("Salir") || accion.equalsIgnoreCase("Meter la llave")
-                    || accion.equalsIgnoreCase("Meter la llave en la puerta")
-                    || accion.equalsIgnoreCase("Poner la llave en la puerta")) {
+                hasPickedUpKey = true;
+            } else if (action.equalsIgnoreCase("Abrir puerta") || action.equalsIgnoreCase("Abrir la puerta")
+                    || action.equalsIgnoreCase("Salir") || action.equalsIgnoreCase("Meter la llave")
+                    || action.equalsIgnoreCase("Meter la llave en la puerta")
+                    || action.equalsIgnoreCase("Poner la llave en la puerta")) {
                 System.out.println();
                 System.out.println("Todavía no puedes hacer eso.");
                 System.out.println("La puerta está cerrada con llave.");
@@ -60,19 +60,19 @@ public class DungeonEscape {
 
         }
 
-        Boolean haAbiertoLaPuerta = false;
+        Boolean hasOpenedDoor = false;
 
-        while (haAbiertoLaPuerta == false) {
+        while (hasOpenedDoor == false) {
             System.out.println("¿Qué quieres hacer?");
-            accion = scanner.nextLine();
-            accion = accion.strip();
+            action = scanner.nextLine();
+            action = action.strip();
 
-            if (accion.equalsIgnoreCase("Observar") || accion.equalsIgnoreCase("Observar la puerta")
-                    || accion.equalsIgnoreCase("Observar puerta")) {
+            if (action.equalsIgnoreCase("Observar") || action.equalsIgnoreCase("Observar la puerta")
+                    || action.equalsIgnoreCase("Observar puerta")) {
                 System.out.println("La puerta se ve oxidada.");
                 System.out.println("Te acercas y ves una ranura en la cerradura.");
-            } else if (accion.equalsIgnoreCase("Abrir puerta") || accion.equalsIgnoreCase("Quitar llave a la puerta")
-                    || accion.equalsIgnoreCase("Abrir la puerta")) {
+            } else if (action.equalsIgnoreCase("Abrir puerta") || action.equalsIgnoreCase("Quitar llave a la puerta")
+                    || action.equalsIgnoreCase("Abrir la puerta")) {
                 System.out.println();
                 System.out.println("Te acercas a la puerta e insertas la llave en la cerradura.");
                 System.out.println("Escuchas un clic...");
@@ -81,45 +81,45 @@ public class DungeonEscape {
                 System.out.println("¡HAS ESCAPADO DE LA CELDA!");
                 System.out.println("No será tan fácil la próxima vez...");
                 System.out.println();
-                haAbiertoLaPuerta = true;
+                hasOpenedDoor = true;
             }
 
         }
 
-        Boolean haElegidoCamino = false;
-        intentos = 0;
-        String caminoElejido = "";
-        while (haElegidoCamino == false) { 
+        Boolean hasChosenPath = false;
+        attempts = 0;
+        String chosenPath = "";
+        while (hasChosenPath == false) { 
     
-            if (intentos == 0) {
+            if (attempts == 0) {
                 
                 System.out.println("Avanzas y observas que frente a ti hay dos caminos.");
                 System.out.println("A tu izquierda hay un pasillo, por el que entra una corriente de aire.");
                 System.out.println("A tu derecha hay unas escaleras, que descienden hacia la oscuridad.");
-            } else if (intentos >= 1) {
+            } else if (attempts >= 1) {
                 System.out.println("A tu izquierda hay un pasillo por donde se siente una ligera brisa.");
                 System.out.println("A tu derecha hay unas escaleras oscuras, y no alcanzas a ver donde terminan.");
             }
-            intentos ++;
+            attempts ++;
 
-            System.out.println("¿Hacia adonde quiers ir?");
-            accion = scanner.nextLine();
-            System.out.println("Has elegido: " + accion);
-            accion = accion.strip();
+            System.out.println("¿Hacia dónde quiers ir?");
+            action = scanner.nextLine();
+            System.out.println("Has elegido: " + action);
+            action = action.strip();
 
-            if (accion.equalsIgnoreCase("Ir a la derecha") || accion.equalsIgnoreCase("Bajar las escaleras") || accion.equalsIgnoreCase("Derecha") || accion.equalsIgnoreCase("Bajar") || accion.equalsIgnoreCase("A la derecha")) {
+            if (action.equalsIgnoreCase("Ir a la derecha") || action.equalsIgnoreCase("Bajar las escaleras") || action.equalsIgnoreCase("Derecha") || action.equalsIgnoreCase("Bajar") || action.equalsIgnoreCase("A la derecha")) {
 
-                haElegidoCamino = true;
-                caminoElejido = "Bajar las escaleras.";
-            } else if (accion.equalsIgnoreCase("Ir a la izquierda") || accion.equalsIgnoreCase("Entrar al pasillo") || accion.equalsIgnoreCase("Ir al pasillo") || accion.equalsIgnoreCase("Izquierda") || accion.equalsIgnoreCase("A la izquierda")) {
+                hasChosenPath = true;
+                chosenPath = "stairs";
+            } else if (action.equalsIgnoreCase("Ir a la izquierda") || action.equalsIgnoreCase("Entrar al pasillo") || action.equalsIgnoreCase("Ir al pasillo") || action.equalsIgnoreCase("Izquierda") || action.equalsIgnoreCase("A la izquierda")) {
 
-                haElegidoCamino = true;
-                caminoElejido = "Entrar al pasillo.";
+                hasChosenPath = true;
+                chosenPath = "hallway";
             } else {
                 System.out.println("No puedes hacer eso. Debes de ir por uno de los caminos.");
             }
 
-            if (caminoElejido.equals("Bajar las escaleras.")) {
+            if (chosenPath.equals("stairs")) {
 
                 System.out.println("Bajas las escaleras oscuras con mucho cuidado.");
                 System.out.println("A medida que bajas, ves más y más oscuro.");
@@ -127,10 +127,10 @@ public class DungeonEscape {
                 System.out.println("Sigues quieto hasta que escuchas un leve quejido a la distancia.");
                 System.out.println("¿Continúas?");
                 
-                accion = scanner.nextLine();
-                accion = accion.strip();
+                action = scanner.nextLine();
+                action = action.strip();
 
-                if (accion.equalsIgnoreCase("Si") || accion.equalsIgnoreCase("Sí") || accion.equalsIgnoreCase("Continúo") || accion.equalsIgnoreCase("Continuo")) {
+                if (action.equalsIgnoreCase("Si") || action.equalsIgnoreCase("Sí") || action.equalsIgnoreCase("Continúo") || action.equalsIgnoreCase("Continuo")) {
                     System.out.println("Sigues bajando hasta llegar al fondo de las escaleras.");
                     System.out.println("Avanzas por el pasillo. Los quejidos se van haciendo más fuertes.");
                     System.out.println("De pronto ves una luz débil. Caminas hacia ella.");
@@ -145,7 +145,7 @@ public class DungeonEscape {
                 }
 
             
-            } else if (caminoElejido.equalsIgnoreCase("Entrar al pasillo.")) {
+            } else if (chosenPath.equalsIgnoreCase("hallway")) {
 
                 System.out.println("Te adentras por el pasillo.");
                 System.out.println("Su brisa es cada vez más fuerte.");
