@@ -11,6 +11,7 @@ public class DungeonEscape {
         System.out.println();
         System.out.println("Despiertas en una celda abandonada. No recuerdas cómo llegaste ahí...");
         System.out.println("Frente a ti hay una puerta de hierro cerrada y una pequeña llave oxidada en el suelo.");
+        System.out.println("Necesitas escapar.");
         System.out.println();
 
         String action;

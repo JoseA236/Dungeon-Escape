@@ -4,7 +4,14 @@
 
 <u>Descripción General del Proyecto</u>
 
-Dungeon Escape es un videojuego del género de **aventura de texto basada en comandos**. El jugador debe escribir en la terminal la acción que desea hacer, y en base a sus decisiones ocurren distintos eventos. **Su objetivo es escapar de una mazmorra**.
+Dungeon Escape es un videojuego del género de **aventura de texto basada en comandos**. El jugador debe escribir en la terminal la acción que desea hacer, y en base a sus decisiones ocurren distintos eventos.
+
+**Despiertas en una celda abandonada.** No recuerdas cómo llegaste ahí... Frente a ti hay una puerta de hierro cerrada y una pequeña llave oxidada en el suelo. **Necesitas escapar.** Y ahora, *¿qué quieres hacer?*
+
+Debes elegir entre distintos caminos. Algunos te llevarán un poco más cerca de la salida. Eso sí, ten mucho cuidado, porque parece que alguien te está siguiendo...
+
+
+![Portada Dungeon Escape](</imgs/Dungeon_Escape_Portada.png>)
 
 
 ### 2. Índice de Contenidos
@@ -32,3 +39,4 @@ Dungeon Escape es un videojuego del género de **aventura de texto basada en com
 - [ ] Etapa 2 primer camino
 - [ ] Etapa 2 segundo camino
 - [ ] Mecánica de inventario
+- [ ] Mecánica interacción personaje que persigue al jugador
