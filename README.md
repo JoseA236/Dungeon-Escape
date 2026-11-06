@@ -1,8 +1,8 @@
 # Dungeon Escape (Pre-alpha)
 
-### 1. Presentación del Proyecto
+### 1. Presentación del Videojuego
 
-<u>Descripción General del Proyecto</u>
+<u>Descripción General del Videojuego</u>
 
 Dungeon Escape es un videojuego del género de **aventura de texto basada en comandos**. El jugador debe escribir en la terminal la acción que desea hacer, y en base a sus decisiones ocurren distintos eventos.
 
