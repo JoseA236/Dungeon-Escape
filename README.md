@@ -56,11 +56,19 @@ Mi objetivo es que el jugador tenga una buena experiencia y que tanto las mecán
    ```bash
    javac DungeonEscape.java
    ```
+
 4. Ejecutar el programa.
 
    ```bash
    java DungeonEscape
    ```
 
-
 ### 5. Tecnologías Usadas
+
+| Tecnología        | Versión   | Descripción                          | Uso                                              |
+| :------------------ | :----------: | :------------------------------------- | :------------------------------------------------ |
+| Java JDK           | `21.0.8 LTS` | Entorno de Java                       | Codificar en Java, compilar y ejecutar archivos `.java` |
+| Visual Studio Code | `1.145.2`    | Editor de código                     | Desarrollar el videojuego y crear archivo `README.md` |
+| Git                | `2.55.0`     | Sistema de control de versiones local   | Hacer commits y push al repositorio remoto del videojuego   |
+| GitHub             |     No aplica       | Plataforma donde está el alojamiento remoto del repositorio | Guarda los archivos y el historial de versiones. Hacer pull requests. |
+| Markdown All in One | `3.6.3`     | Extensión de VSCode para edición de Markdown | Creación y modificación archivo `README.md` |
