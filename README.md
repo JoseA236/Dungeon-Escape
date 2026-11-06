@@ -4,15 +4,17 @@
 
 <u>Descripción General del Videojuego</u>
 
-Dungeon Escape es un videojuego del género de **aventura de texto basada en comandos**. El jugador debe escribir en la terminal la acción que desea hacer, y en base a sus decisiones ocurren distintos eventos.
+Dungeon Escape es un videojuego del género de **aventura de texto basada en comandos**. El jugador debe escribir en la terminal la acción que desea hacer, y en función de sus decisiones ocurren distintos eventos.
 
 **Despiertas en una celda abandonada.** No recuerdas cómo llegaste ahí... Frente a ti hay una puerta de hierro cerrada y una pequeña llave oxidada en el suelo. **Necesitas escapar.** Y ahora, *¿qué quieres hacer?*
 
 Debes elegir entre distintos caminos. Algunos te llevarán un poco más cerca de la salida. Eso sí, ten mucho cuidado, porque parece que alguien te está siguiendo...
 
-
 ![Portada Dungeon Escape](</imgs/Dungeon_Escape_Portada.png>)
 
+Decidí desarrollar este videojuego porque me gusta el desarrollo de videojuegos. Tengo experiencia previa desarrollando juegos en Unity, pero decidí desarrollar Dungeon Escape únicamente en Java para complementar mi aprendizaje en la universidad. Mi objetivo con este proyecto es aprender Java básico y entender cómo funcionan e interactúan entre sí las estructuras de control. También estoy aprendiendo a desarrollar un programa con un enfoque más narrativo, que es propio de este género de videojuegos.
+
+Mi objetivo es que el jugador tenga una buena experiencia y que tanto las mecánicas como la historia sean entretenidas. Espero seguir puliendo el juego, la historia y las etapas, agregando consecuencias, caminos, detalles y easter eggs para que el usuario pueda disfrutar completamente de la experiencia.
 
 ### 2. Índice de Contenidos
 
@@ -27,16 +29,16 @@ Debes elegir entre distintos caminos. Algunos te llevarán un poco más cerca de
 
 ### 3. Características Principales
 
-* El jugador escribe acciones en la terminal para avanzar.
-* Si la acción no coincide con las opciones disponibles, se le pregunta de nuevo al jugador.
-* Cada opción tiene sus consecuencias.
-* Hay varios caminos por elegir.
-* Se puede retroceder de camino en determinadas situaciones.
+* [X] El jugador escribe acciones en la terminal para avanzar.
+* [X] Si la acción no coincide con las opciones disponibles, se le pregunta de nuevo al jugador.
+* [X] Las opciones importantes tienen diferentes consecuencias.
+* [X] Hay varios caminos por elegir.
 
-###### En desarrollo
-
+- [X] Se puede retroceder de camino en ciertas situaciones.
 - [ ] Mecánica de intento fallido + reinicio
-- [ ] Etapa 2 primer camino
-- [ ] Etapa 2 segundo camino
+- [ ] Etapa 2 -- Llegada al jardín
+- [ ] Etapa 2 -- Bajando las escaleras
 - [ ] Mecánica de inventario
-- [ ] Mecánica interacción personaje que persigue al jugador
+- [ ] Probabilidad de encontrarse con alguien
+
+### 4. Instalación y Configuración
